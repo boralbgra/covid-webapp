@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Covid</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="main-col">
+    <div class="container">
+      <div style="display: flex; align-items: center;">
+        <img src="/images/world-img.svg" class="img-logo">
+        <p class="title">World</p>
+      </div>
+      <div class="container-data">
+        <div>
+          <p class="upper-text">+<%= new Intl.NumberFormat("es-ES").format(world.NewConfirmed) %>
+          </p>
+          <p class="text">
+            <%= new Intl.NumberFormat("es-ES").format(world.TotalConfirmed) %>
+          </p>
+          <p class="sub-text">cases</p>
+        </div>
+        <div>
+          <p class="upper-text">+<%= new Intl.NumberFormat("es-ES").format(world.NewRecovered) %>
+          </p>
+          <p class="text">
+            <%= new Intl.NumberFormat("es-ES").format(world.TotalRecovered) %>
+          </p>
+          <p class="sub-text">recovered</p>
+        </div>
+        <div>
+          <p class="upper-text">+<%= new Intl.NumberFormat("es-ES").format(world.NewDeaths) %>
+          </p>
+          <p class="text">
+            <%= new Intl.NumberFormat("es-ES").format(world.TotalDeaths) %>
+          </p>
+          <p class="sub-text">deaths</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-info">
+      <p style="font-size: 14px; margin: 0; padding: 9px 15px;">
+        All data is freely gathered by the COVID-19 API. All data is operated by
+        the Johns Hopkins University Center for Systems Science and Engineering.
+      </p>
+      <select id="check" name="select" onchange="changed_query()">
+        <option value="cases" selected>+ cases</option>
+        <option value="recoveries">+ recoveries</option>
+        <option value="deaths">+ deaths</option>
+      </select>
+    </div>
+    <div id="put-countries" class="container-countries">
+      <% for (let i = 0; i < 30; i++) {%>
+        <div class="container-country">
+          <div style="display: flex; align-items: center; margin-top: -5px;">
+            <img src= <%= countries[i].Flag %> class="img-logo2">
+            <p class="title">
+              <%= countries[i].Country %>
+            </p>
+          </div>
+          <div class="container-data2">
+            <div>
+              <p class="upper-text">
+                +<%= new Intl.NumberFormat("es-ES").format(countries[i].NewConfirmed) %>
+              </p>
+              <p class="text"> 
+                <%= new Intl.NumberFormat("es-ES").format(countries[i].TotalConfirmed) %>
+              </p>
+              <p class="sub-text">cases</p>
+            </div>
+            <div>
+              <p class="upper-text">
+                +<%= new Intl.NumberFormat("es-ES").format(countries[i].NewRecovered) %>
+              </p>
+              <p class="text">
+                <%= new Intl.NumberFormat("es-ES").format(countries[i].TotalRecovered) %>
+              </p>
+              <p class="sub-text">recovered</p>
+            </div>
+            <div>
+              <p class="upper-text"
+              +<%= new Intl.NumberFormat("es-ES").format(countries[i].NewDeaths) %>
+              </p>
+              <p class="text">
+                <%= new Intl.NumberFormat("es-ES").format(countries[i].TotalDeaths) %>
+              </p>
+              <p class="sub-text">deaths</p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </div>
+  <footer>
+    <p>Made with <a>♥</a> by Borja Albert Gramaje</p>
+  </footer>
+</body>
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts/client.js"></script>
+
+</html>

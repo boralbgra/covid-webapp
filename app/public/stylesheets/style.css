@@ -1,0 +1,197 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.main-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.container {
+  background-color: #F5F6F5;
+  border-radius: 15px;
+  width:360px;
+  height: 80px;
+  padding: 10px;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-top: -3px;
+}
+
+.upper-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sub-text {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: -5px;
+}
+
+.container-data, .container-data2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.container-data2 div {
+  width: 80px;
+}
+
+.title {
+  font: 16px "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.img-logo {
+  width: 26px; 
+  height: 25px;
+  margin-right: 5px;
+}
+
+.container-countries {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.container-country{
+  background-color: #F5F6F5;
+  border-radius: 15px;
+  padding: 15px 10px;
+  margin: 10px;
+  float:left;
+  width: 30%;
+  position: relative;
+  
+}
+
+.img-logo2 {
+  margin-right: 5px;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #202020;
+  padding: 2px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+#button-show-more{
+  text-decoration: none;
+  color: #202020;
+  font-weight: 500;
+}
+
+#button-show-more:hover{
+  border-bottom: 1px solid #202020;
+}
+
+.button-container{
+  margin-top: 30px;
+}
+
+footer a {
+  color: red;
+}
+
+.container-info{
+  max-width:1200px; 
+  width: 100%; 
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-info p{
+  font-size: 14px; 
+  margin: 0; 
+  padding: 9px 15px;
+}
+
+#check {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  padding: 8px;
+  background-color: #F5F6F5;
+  border: 1.5px solid #bababa;
+  outline: none;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1220px) {
+  .container-countries{
+    max-width: 800px;
+  }
+  .container-country {
+    width: 45%;
+  }
+  .container-info {
+    max-width:800px; 
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .container-countries{
+    max-width: 400px;
+  }
+  .container-country {
+    width: 90%;
+  }
+  .container-info {
+    max-width:400px; 
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    max-width: 360px;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .text {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .text {
+    font-size: 14px;
+  }
+  .container-countries{
+    max-width: 270px;
+  }
+  .container-country {
+    width: 85%;
+  }
+  .title {
+    font-size: 14px;
+  }
+}
