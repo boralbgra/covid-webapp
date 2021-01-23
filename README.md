@@ -5,6 +5,9 @@ Author: boralbgra | boralbgra@gmail.com<br/>
 
 Based in Express.js for server-side operations; EJS for implementing views; Axios for fetching data from Express.js server.
 
+The website is fully functional and served by Heroku here: <br/>
+https://boral-covid-webapp.herokuapp.com/
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install all dependencies inside /.app/ directory.
