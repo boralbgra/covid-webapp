@@ -1,6 +1,6 @@
 # Covid webapp
 
-This is a Covid Tracker webapp that display the Covid data of each country.<br/>
+Webapp that displays the Covid data of each country.<br/>
 Author: boralbgra | boralbgra@gmail.com<br/>
 
 Based in Express.js for server-side operations; EJS for implementing views; Axios for fetching data from Express.js server.
